@@ -1,24 +1,20 @@
-import { Sidebar } from "../Sidebar/sidebar";
-import UserIcon from "../../assets/avatar.svg"
+import { DefaultLayout } from "../DefaultLayout";
+import SinglePDF from "../SinglePDF/SinglePDF";
 
 export function DocsScreen() {
-    return (
-        <div className='w-full h-[100vh] bg-[#1f2937] flex flex-row select-none'>
-            <Sidebar />
-            <div className="text-[#ccc] w-full p-[10px] flex flex-col">
-                <div className="w-full float-right flex flex-row justify-end cursor-pointer mb-[25px]">
-                    <div className="flex flex-row justify-between items-center pr-[30px] rounded-[10px]">
-                        <div className="rounded-[50%] overflow-hidden p-[5px] mr-[15px]"><img width={50} height={50} src={UserIcon} alt="Learn Icon"></img></div>
-                        <div className="flex flex-col">
-                            <h1 className="font-bold text-[18px] font-serif">Admin</h1>
-                            <p className="text-[11px] font-serif">@admin</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-[#111827] rounded-[20px] h-full">
 
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+    return (
+        <DefaultLayout>
+            <div className="">
+                <h1 className="text-[30px]">Documents</h1>
+                <div className="overflow-y-auto cursor-pointer h-[80%] p-[10px] pb-[0px] max-h-[820px]">
+                    {array.map((data) => (
+                        <SinglePDF />
+                    ))}
                 </div>
             </div>
-        </div>
+        </DefaultLayout>
     );
 }

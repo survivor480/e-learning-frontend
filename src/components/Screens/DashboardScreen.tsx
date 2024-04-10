@@ -1,24 +1,39 @@
-import { Sidebar } from "../Sidebar/sidebar";
-import UserIcon from "../../assets/avatar.svg"
+import { DefaultLayout } from "../DefaultLayout";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js/auto";
+import { useState } from "react";
+import {Data} from '../../utils/Data';
+import PieChart from "../Charts/Piecharts";
+import BarChart from "../Charts/Barchart";
+
+
+Chart.register(CategoryScale);
 
 export function DashboardScreen() {
+    const [chartData, setChartData] = useState({
+        labels: Data.map((data) => data.year), 
+        datasets: [
+            {
+                label: "Users Gained ",
+                data: Data.map((data) => data.userGain),
+                backgroundColor: [
+                "rgba(75,192,192,1)",
+                "#ecf0f1",
+                "#50AF95",
+                "#f3ba2f",
+                "#2a71d0"
+                ],
+                borderColor: "black",
+                borderWidth: 2
+            }
+        ]
+    });
     return (
-        <div className='w-full h-[100vh] bg-[#1f2937] flex flex-row select-none'>
-            <Sidebar />
-            <div className="text-[#ccc] w-full p-[10px] flex flex-col">
-                <div className="w-full float-right flex flex-row justify-end cursor-pointer mb-[25px]">
-                    <div className="flex flex-row justify-between items-center pr-[30px] rounded-[10px]">
-                        <div className="rounded-[50%] overflow-hidden p-[5px] mr-[15px]"><img width={50} height={50} src={UserIcon} alt="Learn Icon"></img></div>
-                        <div className="flex flex-col">
-                            <h1 className="font-bold text-[18px] font-serif">Admin</h1>
-                            <p className="text-[11px] font-serif">@admin</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-[#111827] rounded-[20px] h-full">
-
-                </div>
+        <DefaultLayout>
+            <div className="flex w-full justify-around">
+                <PieChart chartData={chartData} />
+                <BarChart chartData={chartData} />
             </div>
-        </div>
+        </DefaultLayout>
     );
 }

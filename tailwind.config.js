@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'teacher-background': "url('/assets/sample_teacher_background.jpg')"
+      }
+    },
   },
   plugins: [],
 }

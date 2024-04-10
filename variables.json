@@ -1,0 +1,5 @@
+{
+    "REACT_APP_TITLE": "E-learning Platform",
+    "REACT_APP_DESCRIPTION": "E-learning Platform Description",
+    "baseUrl": "http://localhost:3002"
+}
