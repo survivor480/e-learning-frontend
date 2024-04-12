@@ -1,7 +1,7 @@
 import { DefaultLayout } from "../DefaultLayout";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js/auto";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Data} from '../../utils/Data';
 import PieChart from "../Charts/Piecharts";
 import BarChart from "../Charts/Barchart";
@@ -28,6 +28,10 @@ export function DashboardScreen() {
             }
         ]
     });
+
+    useEffect(() => {
+        document.title = "Dashboard"
+      })
     return (
         <DefaultLayout>
             <div className="flex w-full justify-around">

@@ -14,6 +14,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Toaster } from 'react-hot-toast';
 import ErrorScreen from './components/Screens/ErrorScreen';
 import MessageScreen from './components/Screens/MessageScreen/MessageScreen';
+import SingleCourseScreen from './components/Screens/SingleCourseScreen/SingleCourseScreen';
 
 function App() {
 
@@ -70,8 +71,9 @@ const darkTheme = createTheme({
     <BrowserRouter> 
       <Routes>
         <Route path="*" element={<ErrorScreen />} />
-        <Route path="/" element={<DashboardScreen />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<DashboardScreen />} />
+        <Route path='/courses/:id' element={<SingleCourseScreen />} />
         <Route path="/search" element={<SearchScreen />} />
         <Route path="/insights" element={<InsightsScreen />} />
         <Route path="/docs" element={<DocsScreen />} />
