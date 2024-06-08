@@ -19,7 +19,7 @@ export function EducatorsScreen() {
         <DefaultLayout>
             <div className="flex font-bold text-3xl p-[10px]">Educators</div>   
         <div className="grid grid-cols-4 gap-3 overflow-y-auto h-[780px] p-[10px]">
-        {[1, 2, 3, 4, 5].map(data => (
+        {[1, 2, 3, 4, 5].map(_ => (
             <div className="relative rounded-[20px] border-[#ccc] border-[1px] h-[500px] overflow-hidden items-center">
                 <div
                 className={`h-[200px] flex bg-[url("src/assets/sample_teacher_background.jpg")] bg-opacity-50 bg-cover w-full`}
@@ -40,7 +40,7 @@ export function EducatorsScreen() {
                     </div>
                     <div className="w-full flex justify-around gap-4">
                     <div className="flex gap-1">
-                        {[1, 2, 3, 4, 5].map((data) => (
+                        {[1, 2, 3, 4, 5].map((_) => (
                         <StarIcon
                             sx={{
                             "&:hover": {

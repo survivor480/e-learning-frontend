@@ -14,7 +14,7 @@ export function DocsScreen() {
             <div className="">
                 <h1 className="text-[30px]">Documents</h1>
                 <div className="overflow-y-auto cursor-pointer h-[80%] p-[10px] pb-[0px] max-h-[820px]">
-                    {array.map((data) => (
+                    {array.map((_) => (
                         <SinglePDF />
                     ))}
                 </div>

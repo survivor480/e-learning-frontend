@@ -10,7 +10,7 @@ import BarChart from "../Charts/Barchart";
 Chart.register(CategoryScale);
 
 export function DashboardScreen() {
-    const [chartData, setChartData] = useState({
+    const [chartData, _] = useState({
         labels: Data.map((data) => data.year), 
         datasets: [
             {

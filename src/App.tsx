@@ -15,6 +15,9 @@ import { Toaster } from 'react-hot-toast';
 import ErrorScreen from './components/Screens/ErrorScreen';
 import MessageScreen from './components/Screens/MessageScreen/MessageScreen';
 import SingleCourseScreen from './components/Screens/SingleCourseScreen/SingleCourseScreen';
+import { AddTestsScreen } from './components/Screens/AddTestsScreen/AddTestsScreen';
+import ProfileScreen from './components/Screens/ProfileScreen/ProfileScreen';
+import SettingsScreen from './components/Screens/SettingsScreen/SettingsScreen';
 
 function App() {
 
@@ -25,6 +28,9 @@ const darkTheme = createTheme({
       main: '#0369a1',
       dark: '#0369a1',
       light: '#0369a1'
+    },
+    secondary: {
+      main: '#ef4444'
     }
   },
 });
@@ -82,6 +88,9 @@ const darkTheme = createTheme({
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path="/messages" element={<MessagesScreen />} />
         <Route path="/messages/:id" element={<MessageScreen />} />
+        <Route path="/add-test" element={<AddTestsScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="/settings" element={<SettingsScreen />} />
       </Routes>
     </ BrowserRouter>
     </ThemeProvider>

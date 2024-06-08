@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import { ThirdPartyLogin } from "./ThirdPartyLogin/ThirdPartyLogin";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import variables from "../../../variables.json";
 import axios, { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +23,7 @@ export function Login() {
     setPassword(event.target.value);
   };
 
-  const forgot_password = (event:any) => {
+  const forgot_password = () => {
     notify_custom("We have sent you a link to reset your password, please have a look");
   }
 
