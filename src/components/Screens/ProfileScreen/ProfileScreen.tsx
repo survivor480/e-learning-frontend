@@ -14,6 +14,10 @@ export default function ProfileScreen() {
                     <TextInput placeholder="Middle Name(Optional)" />
                     <TextInput placeholder="Last Name" />
                 </div>
+                <div className="w-full flex">
+                    <TextInput placeholder="Date of Birth" />
+                    <TextInput placeholder="Personal Email(Optional)" />
+                </div>
                 <div className="w-full">
                     <TextInput placeholder="Description" maxRows={5}/>
                 </div>
@@ -25,6 +29,10 @@ export default function ProfileScreen() {
                 <div className="flex w-full">
                     <TextInput placeholder="Job Role"/>
                     <TextInput placeholder="Year of Joining" />
+                </div>
+                <div className="flex w-full">
+                    <TextInput placeholder="Professional Email(Optional)"/>
+                    <TextInput placeholder="End Year" />
                 </div>
                 <p className="bold text-[20px]">Social Media: </p>
                 <div className="flex w-full">

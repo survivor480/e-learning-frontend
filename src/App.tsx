@@ -18,6 +18,7 @@ import SingleCourseScreen from './components/Screens/SingleCourseScreen/SingleCo
 import { AddTestsScreen } from './components/Screens/AddTestsScreen/AddTestsScreen';
 import ProfileScreen from './components/Screens/ProfileScreen/ProfileScreen';
 import SettingsScreen from './components/Screens/SettingsScreen/SettingsScreen';
+import { AddQuestions } from './components/AddQuestions/AddQuestions';
 
 function App() {
 
@@ -91,6 +92,7 @@ const darkTheme = createTheme({
         <Route path="/add-test" element={<AddTestsScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/settings" element={<SettingsScreen />} />
+        <Route path='/add-test/add-questions' element={<AddQuestions />} />
       </Routes>
     </ BrowserRouter>
     </ThemeProvider>
