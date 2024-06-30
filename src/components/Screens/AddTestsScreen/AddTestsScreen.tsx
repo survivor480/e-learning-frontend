@@ -51,8 +51,6 @@ export function AddTestsScreen() {
         setTestSyllabusDescription("");
         
         setOpen(false);
-
-        alert(testList);
     }
  
     const handleClose = () => {
